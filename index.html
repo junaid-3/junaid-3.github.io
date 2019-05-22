@@ -2,47 +2,48 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Project: Blog</title>
+        <title>Project: Event invite</title>
         <style>
-            body {
-                line-height: 1.5em;
-                background-color: rgb(0, 255, 153);
+            #body {
                 font-family: sans-serif;
-                }
-            h1 {
-                text-align: center;
-                text-decoration: underline;
-                
             }
-            h2 {
-                color: rgb(72, 158, 72);
-                text-decoration: underline;
-                font-size: 20px;
+            #header {
+                background-color: rgb(0, 191, 255);
+                text-align: center;
+                padding: 20px;
+            }
+        
+            #carousel {
+                overflow: visible;
+                white-space: nowrap;
             }
             
+            #carousel .slide {
+                    display: inline-block;
+                }
         </style>
     </head>
-    <body>
+    <body id="body">
         
-        <h1>Junaid's Blog</h1>
-
-        <h3>Contents</h3>
+        <h1 id="header">You're invited!</h1>
+        <h2>To Visit Goa!</h2>
+        
+        <div id="carousel">
+            <div class="slide">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg/600px-Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg" >
+            </div>
+            <div class="slide">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg/600px-Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg">
+            </div>
+            <div class="slide">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg/600px-Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg">
+            </div>
+        </div>
+        
+        <p>The details:</p>
         <ul>
-            <li><a href="#first-post">First post!</a></li>
+            <li></li>
         </ul>
-        <br>
-        
-        <h2 id="first-post">First post</h2>
-        <h5>2019-05-20 20:14:54</h5>
-        
-        <p>Hi there, fellow beloved readers. <br>
-            Welcome to my first blog about the daily adventures of my coding life.<br>
-            Well, to start off, I am basically a Scala developer and am very much interested to dive into the world of UI with the help of JavaScript, HTML and of course, <em><strong>CSS</strong></em>. <br></p>
-            <p>
-            Today, at Khan Academy, I learned pretty much the basics of HTML and CSS by the awesome voiced, funny Pamela's video lectures. Stay tuned. <br>
-            <strong>I will be posting a blog about my adventures with learning React JS tomorrow here. Until then, have fun coding! :)</strong>
-        </p>
-        
         
     </body>
 </html>
