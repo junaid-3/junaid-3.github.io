@@ -2,15 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <title>Project: Event invite</title>
         <style>
-        @keyframes example {
-              0%   {background-color: red;}
-              25%  {background-color: yellow;}
-              50%  {background-color: blue;}
-              100% {background-color: green;}
-            }
-
             #body {
                 font-family: sans-serif;
                 background-color: grey;
@@ -29,56 +23,47 @@
                 padding: 10px;
                 text-align: center;
             }
-        
-            #carousel {
-                overflow: visible;
-                white-space: nowrap;
+            #about-goa {
+                float: left;
+                width: 50%;
+                background-color: rgb(237, 238, 247);
+                padding: 5px;
+                padding-left: 10px;
+                margin-top: 50px;
+            }
+                
+            #packages-available {
+                float: right;
+                width: 40%;
+                background-color: rgb(237, 238, 247);
+                margin-left: 1px;
+                margin-top: 50px;
+                padding: 5px;
+                padding-left: 10px;
+                line-height:30px;
             }
             
-            #carousel .slide {
-                    display: inline-block;
-                }
-                
-                #about-goa {
-                    float: left;
-                    width: 50%;
-                    background-color: rgb(237, 238, 247);
-                    padding: 5px;
-                    padding-left: 10px;
-                }
-                
-                #packages-available {
-                    float: right;
-                    width: 40%;
-                    background-color: rgb(237, 238, 247);
-                    margin-left: 1px;
-                    padding: 5px;
-                    padding-left: 10px;
-                    line-height:30px;
-                }
-                
-                #booking-button {
-                    margin-top: 40px;
-                    margin-left: 120px;
-                }
+            #booking-button {
+                margin-top: 40px;
+                margin-left: 120px;
+            }
         </style>
     </head>
     <body id="body">
         
         <h1 id="header">You're invited!</h1>
         <h3 id="header-2">To Visit Goa! The best destination for fun, relaxation and rejuvenation!</h3>
-        
-        <div id="carousel">
-            <div class="slide">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg/600px-Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg" style="object-fit:contain">
-            </div>
-            <div class="slide">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg/600px-Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg" style="object-fit:contain">
-            </div>
-            <div class="slide">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg/600px-Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg" style="object-fit:contain">
-            </div>
-        </div>
+    
+            <div class="w3-content w3-display-container">
+            <img class="mySlides" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg/600px-Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg" width="100%">
+            <img class="mySlides" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg/600px-Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg" width="100%">
+            <img class="mySlides" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg/600px-Our_Lady_of_the_Immaculate_Conception_Church%2C_Goa.jpg" width="100%">
+            
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+
         <div id="about-goa">
         <p>About Goa:</p>
         <ul>
@@ -101,5 +86,27 @@
         <button type="submit" id="booking-button">
             Click to Book Now
         </button>
+        
+        
+        
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+</script>
     </body>
 </html>
